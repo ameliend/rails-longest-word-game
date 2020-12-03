@@ -24,7 +24,7 @@ class GamesController < ApplicationController
         @result = "Sorry, but #{params[:answer]} doeas not seem to be a valid English word..."
       end
     else
-      @result = "Sorry, but #{params[:answer]} can't be built out of #{@letters}"
+      @result = "Sorry, but #{params[:answer]} can't be built out of \'#{@letters.upcase}\'"
     end
     @result
   end
